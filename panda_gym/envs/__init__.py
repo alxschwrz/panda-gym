@@ -4,3 +4,6 @@ from panda_gym.envs.panda_tasks.panda_push import PandaPushEnv
 from panda_gym.envs.panda_tasks.panda_reach import PandaReachEnv
 from panda_gym.envs.panda_tasks.panda_slide import PandaSlideEnv
 from panda_gym.envs.panda_tasks.panda_stack import PandaStackEnv
+from panda_gym.envs.panda_tasks.panda_reach_line import PandaReachLineEnv
+from panda_gym.envs.panda_tasks.panda_reach_sphere import PandaReachSphereEnv
+from panda_gym.envs.panda_tasks.panda_reach_multi import PandaReachMultiEnv

@@ -19,6 +19,27 @@ for reward_type in ["sparse", "dense"]:
         )
 
         register(
+            id="PandaReachLine{}{}-v2".format(control_suffix, reward_suffix),
+            entry_point="panda_gym.envs:PandaReachLineEnv",
+            kwargs=kwargs,
+            max_episode_steps=50,
+        )
+
+        register(
+            id="PandaReachSphere{}{}-v2".format(control_suffix, reward_suffix),
+            entry_point="panda_gym.envs:PandaReachSphereEnv",
+            kwargs=kwargs,
+            max_episode_steps=50,
+        )
+
+        register(
+            id="PandaReachMulti{}{}-v2".format(control_suffix, reward_suffix),
+            entry_point="panda_gym.envs:PandaReachMultiEnv",
+            kwargs=kwargs,
+            max_episode_steps=50,
+        )
+
+        register(
             id="PandaPush{}{}-v2".format(control_suffix, reward_suffix),
             entry_point="panda_gym.envs:PandaPushEnv",
             kwargs=kwargs,
