@@ -16,7 +16,7 @@ class PandaReachSphereEnv(RobotTaskEnv):
     """
 
     def __init__(self, render: bool = False, reward_type: str = "sparse", control_type: str = "ee") -> None:
-        sim = PyBullet(render=render)
+        sim = PyBullet(render=render, background_color=np.array([110, 187, 213]))
         robot = Panda(sim, block_gripper=True, base_position=np.array([-0.6, 0.0, 0.0]), control_type=control_type)
         task = ReachSphere(sim, reward_type=reward_type, get_ee_position=robot.get_ee_position)
         super().__init__(robot, task)
